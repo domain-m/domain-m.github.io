@@ -1,0 +1,13 @@
+<html>
+<body>
+  <script type="text/javascript">
+    function msgReceiver(event) {
+      if (event.origin == "https://domain-a.github.io") {
+        event.source.postMessage("I got a message from Alice", "*");
+      }
+    }
+
+    window.addEventListner("message", msgReceiver, false); 
+  </script>
+</body>
+</html>
