@@ -2,7 +2,7 @@
 <body>
   <script type="text/javascript">
     function msgReceiver(event) {
-      alert(event.origin + event.message); 
+      console.log("message received" + event.origin + ", " + event.message); 
       if (event.origin == "https://domain-a.github.io") {
         event.source.postMessage("I got a message from Alice", "*");
       }
